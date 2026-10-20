@@ -1,0 +1,22 @@
+[package]
+name = "dc-assets"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Download static assets (sprites, thumbnails, animations, music) from the Dragon City servers (fan-made, not affiliated with SocialPoint)."
+readme = "README.md"
+keywords = ["dragon-city", "dchighs", "game", "discord", "telegram"]
+categories = ["api-bindings", "game-development"]
+
+[dependencies]
+dc-core.workspace = true
+bytes = "1"
+reqwest = { version = "0.13", default-features = false, features = ["rustls"] }
+thiserror = "2"
+tokio = { version = "1", features = ["fs"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
