@@ -1,0 +1,22 @@
+[package]
+name = "dc-localization"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Dragon City localization (translations) fetching and lookup (fan-made, not affiliated with SocialPoint)."
+readme = "README.md"
+keywords = ["dragon-city", "dchighs", "game", "discord", "telegram"]
+categories = ["api-bindings", "game-development"]
+
+[dependencies]
+dc-core.workspace = true
+reqwest = { version = "0.13", default-features = false, features = ["rustls", "json"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+thiserror = "2"
+unicode-normalization = "0.1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
