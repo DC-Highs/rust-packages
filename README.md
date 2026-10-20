@@ -1,26 +1,30 @@
 # DC Highs for Rust
 
-Rust ports of the [DC Highs](https://github.com/DC-Highs) Dragon City libraries, for high-performance Discord/Telegram bots.
+Rust ports of the [DC Highs](https://github.com/DC-Highs) Dragon City libraries, built for high performance.
 Fan-made, not affiliated with SocialPoint.
 
 | crate | port of | purpose |
 | --- | --- | --- |
+| [`dc-core`](crates/dc-core) | `@dchighs/dc-core` | shared enums, game settings, validation tools and calculators |
+| [`dc-localization`](crates/dc-localization) | `@dchighs/dc-localization` | translations fetching, key lookup, compare and object translation |
+| [`dc-statistics`](crates/dc-statistics) | `@dchighs/dc-statistics` | generate item, dragon, island, and global game statistics |
 | [`dc-assets`](crates/dc-assets) | `@dchighs/dc-assets` | download sprites, thumbnails, animations, music |
 | [`dc-config`](crates/dc-config) | `@dchighs/dc-config` | fetch/load the game configuration |
 | [`dc-config-mapper`](crates/dc-config-mapper) | `@dchighs/dc-config-mapper` | restructure, translate and populate the configuration |
-| [`dc-localization`](crates/dc-localization) | `@dchighs/dc-localization` | translations (required by the mapper) |
-| [`dc-core`](crates/dc-core) | `@dchighs/dc-core` (subset) | shared enums |
 
 ## Using it before publishing
 
 ```toml
 [dependencies]
+dc-core = { path = "D:/v2Projects/@dchighs/rust-packages/crates/dc-core" }
+dc-localization = { path = "D:/v2Projects/@dchighs/rust-packages/crates/dc-localization" }
+dc-statistics = { path = "D:/v2Projects/@dchighs/rust-packages/crates/dc-statistics" }
 dc-assets = { path = "D:/v2Projects/@dchighs/rust-packages/crates/dc-assets" }
 dc-config = { path = "D:/v2Projects/@dchighs/rust-packages/crates/dc-config" }
 dc-config-mapper = { path = "D:/v2Projects/@dchighs/rust-packages/crates/dc-config-mapper" }
 ```
 
-Or from a git repository: `cargo add --git https://github.com/<you>/<repo> dc-assets`.
+Or from a git repository: `cargo add --git https://github.com/<you>/<repo> dc-core dc-localization dc-statistics`.
 
 ## Publishing to crates.io
 
@@ -29,12 +33,13 @@ Dependencies must exist on the registry first, so publish in this order (`cargo 
 ```sh
 cargo publish -p dc-core
 cargo publish -p dc-localization
+cargo publish -p dc-statistics
 cargo publish -p dc-assets
 cargo publish -p dc-config
 cargo publish -p dc-config-mapper
 ```
 
-After that: `cargo add dc-assets dc-config dc-config-mapper`.
+After that: `cargo add dc-core dc-localization dc-statistics dc-assets dc-config dc-config-mapper`.
 
 Before publishing, check the `repository` URL in the root `Cargo.toml` (it currently points to a placeholder
 `DC-Highs/dchighs-rs`) and bump `version` there (all crates share it).

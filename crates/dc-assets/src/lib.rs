@@ -3,8 +3,7 @@
 //!
 //! Every downloader is a small value type that knows its URL. It can either
 //! save the file to disk with `download(path)` or give you the bytes with
-//! `fetch()` (handy for sending the file straight to Discord/Telegram without
-//! touching the disk).
+//! `fetch()` (no disk needed).
 //!
 //! ```no_run
 //! use dc_assets::{DragonPhase, DragonSpriteDownloader, SpriteQuality};

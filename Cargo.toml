@@ -8,9 +8,12 @@ edition = "2021"
 license = "MIT"
 authors = ["Marcuth"]
 repository = "https://github.com/DC-Highs/rust-packages"
-rust-version = "1.75"
+rust-version = "1.80"
 
 [workspace.dependencies]
 dc-core = { path = "crates/dc-core", version = "0.1.0" }
 dc-localization = { path = "crates/dc-localization", version = "0.1.0" }
 dc-config = { path = "crates/dc-config", version = "0.1.0" }
+dc-config-mapper = { path = "crates/dc-config-mapper", version = "0.1.0" }
+dc-statistics = { path = "crates/dc-statistics", version = "0.1.0" }
+dc-assets = { path = "crates/dc-assets", version = "0.1.0" }

@@ -8,8 +8,11 @@ repository.workspace = true
 rust-version.workspace = true
 description = "Shared enums and constants for the DC Highs Dragon City crates (fan-made, not affiliated with SocialPoint)."
 readme = "README.md"
-keywords = ["dragon-city", "dchighs", "game", "discord", "telegram"]
+keywords = ["dragon-city", "dchighs", "game", "performance"]
 categories = ["api-bindings", "game-development"]
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
+thiserror = "2"
+regex = "1"
+rand = "0.8"

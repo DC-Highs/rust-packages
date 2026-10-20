@@ -1,0 +1,21 @@
+[package]
+name = "dc-statistics"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Generate comprehensive statistics from Dragon City configuration data (fan-made, not affiliated with SocialPoint)."
+readme = "README.md"
+keywords = ["dragon-city", "dchighs", "game", "performance"]
+categories = ["api-bindings", "game-development"]
+
+[dependencies]
+dc-core.workspace = true
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+thiserror = "2"
+
+[dev-dependencies]
+serde_json = { version = "1" }

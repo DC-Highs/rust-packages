@@ -8,7 +8,7 @@ repository.workspace = true
 rust-version.workspace = true
 description = "Restructure and populate Dragon City configuration data (fan-made, not affiliated with SocialPoint)."
 readme = "README.md"
-keywords = ["dragon-city", "dchighs", "game", "discord", "telegram"]
+keywords = ["dragon-city", "dchighs", "game", "performance"]
 categories = ["api-bindings", "game-development"]
 
 [dependencies]

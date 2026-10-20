@@ -17,7 +17,7 @@ Every downloader knows its `url()` and offers:
 
 | method | what it does |
 | --- | --- |
-| `fetch()` | downloads into memory (`bytes::Bytes`) — ideal for sending straight to Discord/Telegram |
+| `fetch()` | downloads into memory (`bytes::Bytes`) — no disk needed |
 | `download(path)` | saves to disk and returns the path |
 | `fetch_with(&client)` / `download_with(&client, path)` | same, with your own `reqwest::Client` (proxy, timeouts, connection pool) |
 
