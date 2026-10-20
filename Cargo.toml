@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Marcuth"]
+repository = "https://github.com/DC-Highs/rust-packages"
+rust-version = "1.75"
+
+[workspace.dependencies]
+dc-core = { path = "crates/dc-core", version = "0.1.0" }
+dc-localization = { path = "crates/dc-localization", version = "0.1.0" }
+dc-config = { path = "crates/dc-config", version = "0.1.0" }
